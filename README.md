@@ -25,7 +25,11 @@ Source: https://www.kaggle.com/datasets/susant4learning/holiday-package-purchase
  - `CustomerID` should be removed because it has no effect and is not utilized.
  - There are `140 duplicate items`, the next one is removed.
  - `Passport Age`, `Monthly Income`, `Number of Followups`, `Preferred Property Star`, `Number of Person Visiting` , `City Tier`, `Duration of Pitch` has a strong correlation to the main features.
- - Handling outliers with the IQR method: `DurationOfPitch`, `NumberOfTrips`, `MonthlyIncome`, `NumberOfFollowups`, `NumberOfPersonVisiting`. they have outlier values ​​far from Q1 and Q3
+ - Handling outliers with the IQR method: `DurationOfPitch`, `NumberOfTrips`, `MonthlyIncome`, `NumberOfFollowups`, `NumberOfPersonVisiting`. they have outlier values ​​far from Q1 and Q3:
+
+Before-> ![](Images/ss%20IQR%20sebelum.jpg)
+
+After-> ![](Images/SS%20iqr%20sesudah.jpg)
 ```mermaid
 graph LR
 A[Before Handling Outlier 4.888 rows] ----> B[After handling Ourlier 4652 rows]
@@ -36,6 +40,7 @@ A[Before Handling Outlier 4.888 rows] ----> B[After handling Ourlier 4652 rows]
  - Splitting the data into Train and Test using **sklearn** with ratio 30/70. Because, after splitting the data into imbalances, the SMOTE method is used to deal with the imbalance data.
 
 **Model & Evaluation**
+
 `Logistic Regression, Decision Tree, Random Forest, kNN, AdaBoost, and XGBoost` are the six modeling algorithms I've tested. I choose `XGBoost` among the six algorithm models because it has the best stability and performance. In this case, I'd want to focus on modeling `Recall` in order to eliminate false negatives that effect actual customers who want to buy a package holiday but are detected as not looking to buy. 182 of the 253 customers who purchased travel packages accurately predicted their goals. It can be assumed that the modeling success rate is 72%. 
 
 ---masukin gambar---
@@ -43,7 +48,11 @@ A[Before Handling Outlier 4.888 rows] ----> B[After handling Ourlier 4652 rows]
 2. Tabel setelah tuning
 3.  fiture Importance (jelasin dikit apa aja yg diambil)
 
+![](Images/Tabel%20Experimen%20Model.jpg)
+![](Images/ss%20sharp%20values.jpg)
+
 **Business Insight**
+
 Before using the model, the percentage of the number of holiday package buyers was only 18% but after using the model the results increased to 72% (*expected performance). I use the CAC method with the following statement to see how the model impacts revenue. 
 
                   Before Using Model Prediction

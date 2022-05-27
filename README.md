@@ -43,10 +43,6 @@ A[Before Handling Outlier 4.888 rows] ----> B[After handling Ourlier 4652 rows]
 
 `Logistic Regression, Decision Tree, Random Forest, kNN, AdaBoost, and XGBoost` are the six modeling algorithms I've tested. I choose `XGBoost` among the six algorithm models because it has the best stability and performance. In this case, I'd want to focus on modeling `Recall` in order to eliminate false negatives that effect actual customers who want to buy a package holiday but are detected as not looking to buy. 182 of the 253 customers who purchased travel packages accurately predicted their goals. It can be assumed that the modeling success rate is 72%. 
 
----masukin gambar---
-1. Tabel sebelum Tuning
-2. Tabel setelah tuning
-3.  fiture Importance (jelasin dikit apa aja yg diambil)
 
 ![](Images/Tabel%20Experimen%20Model.jpg)
 ![](Images/ss%20sharp%20values.jpg)

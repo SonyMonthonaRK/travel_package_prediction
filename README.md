@@ -45,7 +45,6 @@ A[Before Handling Outlier 4.888 rows] ----> B[After handling Ourlier 4652 rows]
 
 
 ![](Images/Tabel%20Experimen%20Model.jpg)
-![](Images/ss%20sharp%20values.jpg)
 
 **Business Insight**
 
